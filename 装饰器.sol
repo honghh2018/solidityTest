@@ -33,4 +33,32 @@ contract functionModifier {
         
         count += 1;
     }
+    //有参数的装饰器
+    
+    modifier cap(uint _x){
+        require(_x<100, "x>100");  //执行装饰器代码
+        _;
+    }
+
+
+
+    function incBy(uint _x) external whenNotPaused cap(_x){
+        count +=_x;
+    }
+    
+    modifier sandwich(){
+        //code here
+        count +=1;
+        _;
+        count *=2;
+    }
+
+    //执行顺序是，先装饰器+1，之后主函数加1，之后装饰器*2
+    function foo() external sandwich{
+        count +=1;
+    }
+
+
+
+
 }

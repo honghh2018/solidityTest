@@ -27,7 +27,27 @@
 			},
 			{
 				"inputs": [],
+				"name": "foo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "inc",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_x",
+						"type": "uint256"
+					}
+				],
+				"name": "incBy",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -87,11 +107,11 @@
 	},
 	"sources": {
 		"装饰器.sol": {
-			"keccak256": "0x1c91bd2a75182cc970826b1b5b8f676c48533d142709fd91d16ebdfbebff4f3d",
+			"keccak256": "0x1631e7b7d32a7e72faa4d501c7e985b6c6dd2be34bb6cb60df095ad6948a1491",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://64e515b8ceebd17e85e4f1d88da3870ab0ca4b99e8f3bc664c0f063d404b8f05",
-				"dweb:/ipfs/QmcxPYQiSBGvEeUBA2vmMtdE6ejnt5G5cDfVzrn8aKBVPX"
+				"bzz-raw://cfc319acf639e50a3051d676eb50708852f461f34e22780629f8c3f8a1798676",
+				"dweb:/ipfs/QmdrkFpvfrnDgmdXEikcEdmBkkeh91RVvENMw58Z5Lr8fF"
 			]
 		}
 	},
