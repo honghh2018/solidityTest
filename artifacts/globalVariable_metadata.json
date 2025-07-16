@@ -1,0 +1,68 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "globalVars",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"solidityViewFunction.sol": "globalVariable"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"solidityViewFunction.sol": {
+			"keccak256": "0xe9d2a3fa1d1fc77e925f8fea26b83794043505232431626107f7aa5b52095a59",
+			"urls": [
+				"bzz-raw://24b4ca248a3150c3201f570356ee7c154f1a939717918dd03648a3b2f07a95d7",
+				"dweb:/ipfs/QmSiShYgyPCuYsmThxMqVK9UvZ7xQfXTETD1c6sKQY3s8f"
+			]
+		}
+	},
+	"version": 1
+}
