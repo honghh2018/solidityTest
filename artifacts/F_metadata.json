@@ -1,0 +1,73 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "Log",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "bar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "foo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"第二周/存储/调用复函数1.sol": "F"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"第二周/存储/调用复函数1.sol": {
+			"keccak256": "0x509cdf17b6e7881f24ad7cced0a09f6ed7a0de9ba198aae3fdc1f8c96cdd45f8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6e08c43fc7235da2151e18322ea89a95cbff784b14abb07d2dccf8bd3147f8ec",
+				"dweb:/ipfs/QmTP6tXHbz26SQMmnirLuxd1418JPcFar1qi7UxudzGg1B"
+			]
+		}
+	},
+	"version": 1
+}
