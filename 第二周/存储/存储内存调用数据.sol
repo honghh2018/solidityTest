@@ -4,9 +4,11 @@ pragma solidity ^0.8.7;
 
 
 //storage 存储在链上
-//memory 只能存储在内存上
-// calldata 这个和内存很像，只能用来入参
+//memory 只能存储在内存上  刻度科协
+// calldata 这个和内存很像，只能用来入参 只能读 更快
+//stack 免费堆栈，和storage可以免费送gas
 contract DataLocations{
+     
      struct MyStruct{
         uint256 foo;
         string text;

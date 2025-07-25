@@ -60,11 +60,11 @@
 	},
 	"sources": {
 		"第二周/部署任何合约.sol": {
-			"keccak256": "0x260577c97d7c78367918599bc3a2641f9229a08cffd5a87c32f7bd8f19ff6e35",
+			"keccak256": "0xc14893281fb138073941d8de441cd8f05395cbda09a18a49b12f561e14d32056",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9d748bc2ff8f253a11f5ae413a894bd5bf4697cbffe991b43c58ad0d877de618",
-				"dweb:/ipfs/QmQyUXzJG9PQqNxr8LTCJ4E9tX5uknY2n56n1R3qm7hkns"
+				"bzz-raw://b5362ed2c0e93bc8630bfefa820e215fd528b8f287229455020c73fda29b70bb",
+				"dweb:/ipfs/QmaVtq6syNvUmte9Cm2afYKwtSURwgrs8gm4k73XiZhRn8"
 			]
 		}
 	},

@@ -29,7 +29,7 @@ contract Error {
 
     function testAssert() external view {
         //我们坚信合约中没有人修改123，如果不是的话就报错，断言报错，说明合约有bug
-        assert(num == 123);
+        assert(num == 123);   //断言会回滚，应用余额加减，防止余额出错。回滚的时候消耗gas
     }
 
     //这里会触发 assert

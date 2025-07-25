@@ -13,7 +13,7 @@ contract Payable{
         owner = payable(msg.sender);  //要强转
         
     }
-
+    // function receive() external payable { }
     //用户调用函数的时候，可以去接收以太 payable
     // function deposit() external payable {}   //直接定义就行？
     function deposit() external  {}   //直接定义就行？ 没有payable不行

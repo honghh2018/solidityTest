@@ -9,7 +9,7 @@ pragma solidity ^0.8.7;
 //send 2300 gas return bool
 //call all gas returns bool or data //转出所有的gas
 
-
+//发送以太币
 contract  Sendether{
     constructor(){}
     // fallback() external payable { }
