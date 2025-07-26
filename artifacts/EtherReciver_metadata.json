@@ -6,48 +6,23 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"stateMutability": "payable",
-				"type": "constructor"
-			},
-			{
+				"anonymous": false,
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "_to",
-						"type": "address"
-					}
-				],
-				"name": "sendViaCall",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
 					{
-						"internalType": "address payable",
-						"name": "_to",
-						"type": "address"
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "gas",
+						"type": "uint256"
 					}
 				],
-				"name": "sendViaSend",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "_to",
-						"type": "address"
-					}
-				],
-				"name": "sendViaTransfer",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
+				"name": "Log",
+				"type": "event"
 			},
 			{
 				"stateMutability": "payable",
@@ -67,7 +42,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"第三周/发送以太币.sol": "Sendether"
+			"第三周/发送以太币.sol": "EtherReciver"
 		},
 		"evmVersion": "prague",
 		"libraries": {},

@@ -7,46 +7,46 @@
 		"abi": [
 			{
 				"inputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
 					{
 						"internalType": "address payable",
-						"name": "_to",
+						"name": "",
 						"type": "address"
 					}
 				],
-				"name": "sendViaCall",
-				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
-						"name": "_to",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
 					}
 				],
-				"name": "sendViaSend",
+				"name": "withdraw",
 				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address payable",
-						"name": "_to",
-						"type": "address"
-					}
-				],
-				"name": "sendViaTransfer",
-				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -67,7 +67,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"第三周/发送以太币.sol": "Sendether"
+			"第三周/以太钱包.sol": "Etherwallet"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -81,12 +81,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"第三周/发送以太币.sol": {
-			"keccak256": "0x70257bd81195856df5b65696f8cef95592ddeb65e5515c4ce454a61c5f1b6676",
+		"第三周/以太钱包.sol": {
+			"keccak256": "0x5a38d74530d101c153f37aa6834f6ac06d7d7a6b585d0d4cd9fd7411e9b0ba9c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e2614c15196f79f5286c33b4657daf14cd974d71345d9165b92538f69784b82b",
-				"dweb:/ipfs/QmXGF7E2iJhRJHLmcwAW52jmGBUY5FRCx5hvKQGXxYqUWV"
+				"bzz-raw://4f54990830587a748b81a986c98a6e7b856f3986807b3f5a584058731e63641b",
+				"dweb:/ipfs/QmY8KWhDzbutnJMKqt2BaM2FRYQDhov9uG4AtJYAYtTkcW"
 			]
 		}
 	},
