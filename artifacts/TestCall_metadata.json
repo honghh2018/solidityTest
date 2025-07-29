@@ -6,69 +6,53 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "getX",
-				"outputs": [
+				"anonymous": false,
+				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getXandValue",
-				"outputs": [
+						"indexed": false,
+						"internalType": "address",
+						"name": "caller",
+						"type": "address"
+					},
 					{
+						"indexed": false,
 						"internalType": "uint256",
-						"name": "",
+						"name": "amount",
 						"type": "uint256"
 					},
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
+				"name": "Log",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
 			},
 			{
 				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_message",
+						"type": "string"
+					},
 					{
 						"internalType": "uint256",
 						"name": "_x",
 						"type": "uint256"
 					}
 				],
-				"name": "setX",
+				"name": "foo",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_x",
-						"type": "uint256"
-					}
-				],
-				"name": "setXandSendEther",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
+						"type": "bool"
 					},
 					{
 						"internalType": "uint256",
@@ -81,12 +65,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "value",
+				"name": "message",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "string",
 						"name": "",
-						"type": "uint256"
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -104,6 +88,10 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -119,7 +107,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"第三周/调用其他合约.sol": "TestContract1"
+			"第三周/调用call.sol": "TestCall"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -133,12 +121,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"第三周/调用其他合约.sol": {
-			"keccak256": "0x9d2a222c60b091393e1725c84d6125610ec7ca8197c588b0d1daf49a8da9c977",
+		"第三周/调用call.sol": {
+			"keccak256": "0xf14bdd9bbf6ef8ded951e2a664bf90be667cd5226072e41b34f0e58127890d64",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://569480aa86f68f10eaca52cf4e048c994a12481cd5a4739421fd95f161926e9e",
-				"dweb:/ipfs/QmQZwA8BHAsFqQRBDxhW8AvXHr72eJf11xiyKGuTyxoZME"
+				"bzz-raw://f3a129d9f0dbba570a03dada68b13e8290afb3d679dbd2f693ac01decab0fb1a",
+				"dweb:/ipfs/QmagXq8jhkVSCR6TAYhjnrVJ1a4bph13D2VzMwiBkvQ1D9"
 			]
 		}
 	},

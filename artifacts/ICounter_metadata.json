@@ -39,7 +39,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"第三周/接口1.sol": "Counter"
+			"第三周/接口.sol": "ICounter"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -53,12 +53,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"第三周/接口1.sol": {
-			"keccak256": "0x7c4a1cff84abea18512075a29761b627d8a13db81f1e8c769ea296970cca6f99",
+		"第三周/接口.sol": {
+			"keccak256": "0xc5eac87d5b935000e73392c8390944bebaec244a5a1e84d98161a27ceb7e62bc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0c88e41a758327e23e0bf4694dd15b5ba49d74a136355a2b6099ff0cb39e1995",
-				"dweb:/ipfs/QmYqtgE3RMLLutYiiJn3q3aEzg3P8BRZmN7sbkgKRwv73x"
+				"bzz-raw://269fc423cecab34b35db4cab558af3c70a1cadca9ffab0d6a2e78f5883f599d5",
+				"dweb:/ipfs/QmNq7p5U496wvbMjBDhkc75b34kj2dQ1xNDYTrFLqPJrJZ"
 			]
 		}
 	},
