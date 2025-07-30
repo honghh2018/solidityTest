@@ -7,41 +7,54 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "bar",
+				"name": "num",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "baz",
+				"name": "sender",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "address",
 						"name": "",
-						"type": "string"
+						"type": "address"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_num",
+						"type": "uint256"
+					}
+				],
+				"name": "setVar",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "foo",
+				"name": "value",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -58,7 +71,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"第二周/存储/继承.sol": "B"
+			"第三周/委托调用.sol": "B"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -72,12 +85,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"第二周/存储/继承.sol": {
-			"keccak256": "0x94e763b802bf3818672e7b03f87116bc3d12fc65666e584fb7ac894998a50505",
+		"第三周/委托调用.sol": {
+			"keccak256": "0xbb5c6c880182a5b7d886534dc9f153e82405c30706cb07ef493fd097bc04bf4a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://71250d4d74d9e9dbb8c1ecde6f93d49d5dd86662120761227f1136cc370dd8cb",
-				"dweb:/ipfs/QmTbtgWEhZZQurHXmVgd7BAoj8hBXXHz5qXeAsHeUrEfwJ"
+				"bzz-raw://e65cfd0811e531d3c8c0b16d356926ba80bb681385e69f21f4f758a22948f0ee",
+				"dweb:/ipfs/QmSANJFcSHpeahdJoJjtsopKSA2mfPpcXbdpHyL7eJ4tcn"
 			]
 		}
 	},
