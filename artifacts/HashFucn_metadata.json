@@ -1,0 +1,176 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "text0",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "text1",
+						"type": "string"
+					}
+				],
+				"name": "collision",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "text0",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "text1",
+						"type": "string"
+					}
+				],
+				"name": "collision1",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "text0",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "text1",
+						"type": "string"
+					}
+				],
+				"name": "encodPacked",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "text0",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "text1",
+						"type": "string"
+					}
+				],
+				"name": "encode",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "text",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "num",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "hash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"第四周/Keccak256哈希函数.sol": "HashFucn"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"第四周/Keccak256哈希函数.sol": {
+			"keccak256": "0xe534fedaf87a8ecfa458b8b93d89eb8dff2c74ebd5befdbec14d0129302ba423",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://53b520e816fdd90a0191674d7e80bff506b946386b6afb3aec45db303e6bc3d2",
+				"dweb:/ipfs/QmbJJZEmVHTWeRfpettTKvESC2EyjThNjBrpop3p9ADSdp"
+			]
+		}
+	},
+	"version": 1
+}

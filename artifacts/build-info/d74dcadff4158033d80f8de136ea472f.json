@@ -1,0 +1,504 @@
+{
+	"id": "d74dcadff4158033d80f8de136ea472f",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.30",
+	"solcLongVersion": "0.8.30+commit.73712a01",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"第四周/ERC721.sol": {
+				"content": "//SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.7;\r\n\r\n\r\n//NFT\r\n\r\ninterface IERC165{\r\n   function supportsInterface(bytes4 interfaceID) external view returns (bool);\r\n}\r\n\r\ncontract ERC721 {\r\n\r\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"contracts": {
+			"第四周/ERC721.sol": {
+				"ERC721": {
+					"abi": [],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"\\xe7\\xac\\xac\\xe5\\x9b\\x9b\\xe5\\x91\\xa8/ERC721.sol\":178:200  contract ERC721 {... */\n  mstore(0x40, 0x80)\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  revert(0x00, 0x00)\ntag_1:\n  pop\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"\\xe7\\xac\\xac\\xe5\\x9b\\x9b\\xe5\\x91\\xa8/ERC721.sol\":178:200  contract ERC721 {... */\n      mstore(0x40, 0x80)\n      revert(0x00, 0x00)\n\n    auxdata: 0xa264697066735822122009cd721eeab8b20e4dc0546fb79e1258a7a0b59002735c49b892965e7033540b64736f6c634300081e0033\n}\n",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600e575f5ffd5b50603e80601a5f395ff3fe60806040525f5ffdfea264697066735822122009cd721eeab8b20e4dc0546fb79e1258a7a0b59002735c49b892965e7033540b64736f6c634300081e0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xE JUMPI PUSH0 PUSH0 REVERT JUMPDEST POP PUSH1 0x3E DUP1 PUSH1 0x1A PUSH0 CODECOPY PUSH0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MULMOD 0xCD PUSH19 0x1EEAB8B20E4DC0546FB79E1258A7A0B5900273 TLOAD BLOBHASH 0xB8 SWAP3 SWAP7 MCOPY PUSH17 0x33540B64736F6C634300081E0033000000 ",
+							"sourceMap": "178:22:0:-:0;;;;;;;;;;;;;;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "60806040525f5ffdfea264697066735822122009cd721eeab8b20e4dc0546fb79e1258a7a0b59002735c49b892965e7033540b64736f6c634300081e0033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 PUSH0 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 MULMOD 0xCD PUSH19 0x1EEAB8B20E4DC0546FB79E1258A7A0B5900273 TLOAD BLOBHASH 0xB8 SWAP3 SWAP7 MCOPY PUSH17 0x33540B64736F6C634300081E0033000000 ",
+							"sourceMap": "178:22:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12400",
+								"executionCost": "64",
+								"totalCost": "12464"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 178,
+									"end": 200,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a264697066735822122009cd721eeab8b20e4dc0546fb79e1258a7a0b59002735c49b892965e7033540b64736f6c634300081e0033",
+									".code": [
+										{
+											"begin": 178,
+											"end": 200,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 178,
+											"end": 200,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 178,
+											"end": 200,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 178,
+											"end": 200,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 178,
+											"end": 200,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 178,
+											"end": 200,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							},
+							"sourceList": [
+								"第四周/ERC721.sol",
+								"#utility.yul"
+							]
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.30+commit.73712a01\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"\\u7b2c\\u56db\\u5468/ERC721.sol\":\"ERC721\"},\"evmVersion\":\"prague\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"\\u7b2c\\u56db\\u5468/ERC721.sol\":{\"keccak256\":\"0x32c5309528fbd3bb423c22e341cd67c055391ae161e3d11c3a710bba45b6cba5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9f32bd8b729159b7b2608f0be8f4ebf38157f3097c7a8b6f0ae028aaf8b109ed\",\"dweb:/ipfs/QmQG9LVdDpdkGNcgcMVrJahSZgG7n8dfUCDgU9EJFkR9eB\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				},
+				"IERC165": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "bytes4",
+									"name": "interfaceID",
+									"type": "bytes4"
+								}
+							],
+							"name": "supportsInterface",
+							"outputs": [
+								{
+									"internalType": "bool",
+									"name": "",
+									"type": "bool"
+								}
+							],
+							"stateMutability": "view",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"supportsInterface(bytes4)": "01ffc9a7"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.30+commit.73712a01\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceID\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"\\u7b2c\\u56db\\u5468/ERC721.sol\":\"IERC165\"},\"evmVersion\":\"prague\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"\\u7b2c\\u56db\\u5468/ERC721.sol\":{\"keccak256\":\"0x32c5309528fbd3bb423c22e341cd67c055391ae161e3d11c3a710bba45b6cba5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9f32bd8b729159b7b2608f0be8f4ebf38157f3097c7a8b6f0ae028aaf8b109ed\",\"dweb:/ipfs/QmQG9LVdDpdkGNcgcMVrJahSZgG7n8dfUCDgU9EJFkR9eB\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"第四周/ERC721.sol": {
+				"ast": {
+					"absolutePath": "第四周/ERC721.sol",
+					"exportedSymbols": {
+						"ERC721": [
+							10
+						],
+						"IERC165": [
+							9
+						]
+					},
+					"id": 11,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".7"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "34:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "IERC165",
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"fullyImplemented": false,
+							"id": 9,
+							"linearizedBaseContracts": [
+								9
+							],
+							"name": "IERC165",
+							"nameLocation": "82:7:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"functionSelector": "01ffc9a7",
+									"id": 8,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "supportsInterface",
+									"nameLocation": "104:17:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 4,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 3,
+												"mutability": "mutable",
+												"name": "interfaceID",
+												"nameLocation": "129:11:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 8,
+												"src": "122:18:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes4",
+													"typeString": "bytes4"
+												},
+												"typeName": {
+													"id": 2,
+													"name": "bytes4",
+													"nodeType": "ElementaryTypeName",
+													"src": "122:6:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes4",
+														"typeString": "bytes4"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "121:20:0"
+									},
+									"returnParameters": {
+										"id": 7,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 6,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 8,
+												"src": "165:4:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bool",
+													"typeString": "bool"
+												},
+												"typeName": {
+													"id": 5,
+													"name": "bool",
+													"nodeType": "ElementaryTypeName",
+													"src": "165:4:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bool",
+														"typeString": "bool"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "164:6:0"
+									},
+									"scope": 9,
+									"src": "95:76:0",
+									"stateMutability": "view",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 11,
+							"src": "72:102:0",
+							"usedErrors": [],
+							"usedEvents": []
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"canonicalName": "ERC721",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 10,
+							"linearizedBaseContracts": [
+								10
+							],
+							"name": "ERC721",
+							"nameLocation": "187:6:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [],
+							"scope": 11,
+							"src": "178:22:0",
+							"usedErrors": [],
+							"usedEvents": []
+						}
+					],
+					"src": "34:166:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

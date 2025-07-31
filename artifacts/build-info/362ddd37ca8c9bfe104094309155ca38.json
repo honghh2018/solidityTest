@@ -1,0 +1,69 @@
+{
+	"id": "362ddd37ca8c9bfe104094309155ca38",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.30",
+	"solcLongVersion": "0.8.30+commit.73712a01",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"第四周/erc20和erc721代币标准.sol": {
+				"content": "//SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.7;\r\n\r\n\r\n\r\n//可替代代币\r\n//不可替代代币\r\n//主要是概念解释\r\n//erc20是可替代的 主要用于支付场景 金融   注重代币转移\r\n//erc721是不可替代的  数字艺术品或者藏品  注重代币唯一性 和所有权"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			},
+			"remappings": []
+		}
+	},
+	"output": {
+		"sources": {
+			"第四周/erc20和erc721代币标准.sol": {
+				"ast": {
+					"absolutePath": "第四周/erc20和erc721代币标准.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".7"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "34:23:0"
+						}
+					],
+					"src": "34:265:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
