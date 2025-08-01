@@ -33,7 +33,7 @@ interface IERC721Reciver{
 }
 
 
-contract ERC721 is IERC721 {
+abstract contract ERC721 is IERC721 {
    //合约实现
    event Transfer(address indexed from,address indexed  to,uint256 indexed id);
    event Approval(address indexed owner,address indexed spender,uint256 indexed id);
@@ -50,5 +50,77 @@ contract ERC721 is IERC721 {
     //固定写法
       return interfaceID ==type(IERC721).interfaceId || interfaceID==type(IERC165).interfaceId;
    }
+    
+    function balanceOf(address owner) external view  returns (uint256 balance ){
+        require(owner!=address(0),"owner=address(0)");
+        return _balanceOf(owner);
+    }
+    function ownerOf(uint256 tokenId) external view returns(address owner){
+        owner = _ownerOf(tokenId);
+        require(owner!=address(0),"owner = address 0");
+    }
+
+function setApprovalForAll(address operator,bool _approved) external {
+    isApprovedForAll[msg.sender][operator]=_approved;
+    emit ApprovalForAll(msg.sender, operator, _approved);
+}
+
+        function approve(address to,uint256 tokenId) external {
+            address owner = _ownerOf(tokenId);
+            require(
+                msg.sender==owner || isApprovedForAll[owner][msg.sender],
+                "not authrized"
+            );
+            _approvals[tokenId]=to;
+            emit Approval(owner, to, tokenId);
+        }
+
+            function getApproved(uint256 tokenId) external view returns(address operator){
+                require(_ownerOf[tokenId]!=address(0),"tokenId not exists");
+                return _approvals(tokenId);
+
+            }
+
+        function _isApprovedOrOwner(
+            address owner,
+            address spender,
+            uint tokenId
+        ) internal view returns(bool){
+            return (spender ==owner ||
+              isApprovedForAll[owner][spender] ||
+              spender ==_approvals[tokenId]
+            );
+        }
+
+ function transferFrom(address from,address to,uint256 tokenId) public  {
+    require(from ==_ownerOf(tokenId),"form !=owner");
+    require(to!=address(0),"to = address zero");
+    require(_isApprovedOrOwner(from,msg.sender,tokenId),"not authrized");
+    _balanceOf[from]--;
+    _balanceOf[to]++;
+    _ownerOf[tokenId]=to;
+    delete _approvals[tokenId];
+    emit Transfer(from, to, tokenId);
+ }
+function safeTransferFrom(address from,address to,uint256 tokenId) external {
+    transferFrom(from,to,tokenId);
+    require(
+        to.code.length==0||IERC721Reciver(to).onERC721Received(msg.sender,from,tokenId,"")==IERC721Reciver.onERC721Received.selector,"unsafe reciver"
+
+    );
+}
+
+
+
+    
+    function safeTransferFrom(address from,address to,uint256 tokenId,bytes calldata data) external {
+        
+    }
+   
+    
+    function isApprovedForAll(address owner,address operator) external view returns(bool);
+
+
+
 
 }
