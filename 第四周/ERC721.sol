@@ -23,7 +23,7 @@ interface IERC721{
     function isApprovedForAll(address owner,address operator) external view returns(bool);
 }
 
-interface IERC721Reciver{
+interface IERC721Receiver{
     function onERC721Received(
         address operator,
         address from,
@@ -33,7 +33,8 @@ interface IERC721Reciver{
 }
 
 
-abstract contract ERC721 is IERC721 {
+// abstract contract ERC721 is IERC721 {
+contract ERC721 is IERC721 {
    //合约实现
    event Transfer(address indexed from,address indexed  to,uint256 indexed id);
    event Approval(address indexed owner,address indexed spender,uint256 indexed id);
@@ -48,7 +49,7 @@ abstract contract ERC721 is IERC721 {
   //开始实现函数
    function balanceOf(address owner) external view  returns (uint256 balance ){
     //固定写法
-      return interfaceID ==type(IERC721).interfaceId || interfaceID==type(IERC165).interfaceId;
+      return interfaceID ==type(IERC721).interfaceId || interfaceId==type(IERC165).interfaceId;
    }
     
     function balanceOf(address owner) external view  returns (uint256 balance ){
@@ -105,7 +106,7 @@ function setApprovalForAll(address operator,bool _approved) external {
 function safeTransferFrom(address from,address to,uint256 tokenId) external {
     transferFrom(from,to,tokenId);
     require(
-        to.code.length==0||IERC721Reciver(to).onERC721Received(msg.sender,from,tokenId,"")==IERC721Reciver.onERC721Received.selector,"unsafe reciver"
+        to.code.length==0||IERC721Receiver(to).onERC721Received(msg.sender,from,tokenId,"")==IERC721Receiver.onERC721Received.selector,"unsafe reciver"
 
     );
 }
@@ -114,13 +115,49 @@ function safeTransferFrom(address from,address to,uint256 tokenId) external {
 
     
     function safeTransferFrom(address from,address to,uint256 tokenId,bytes calldata data) external {
-        
+         transferFrom(from,to,tokenId);
+         require(to.code.length==0 || IERC721Receiver(to).onERC721eceived(msg.sender,from,tokenId,data)==IERC721Receiver.onERC721Receiveed.selector,"unsafe recopemt");
     }
    
     
-    function isApprovedForAll(address owner,address operator) external view returns(bool);
+    // function isApprovedForAll(address owner,address operator) external view returns(bool){
+
+    // }
+
+
+   function mint(address to,uint tokenId ) internal {
+    require(to !=address(0),"t0 zero address");
+    require (_ownerOf[tokenId]==address(0),"toen exist");
+     _balanceOf[to]++;
+     _ownerOf[tokenId]=to;
+    emit Transfer(address(0),to,tokenId);
+
+   }
+
+   function _burn(uint tokenId) internal {
+         address owner = _ownerOf[tokenId];
+         require(owner!=address(0),"token does not exists");
+         _balanceOf[owner]--;
+         delete _ownerOf[tokenId];
+         delete _approvals[tokenId];
+         emit Transfer(owner,address(0),tokenId);
+   }
+  
 
 
 
+}
 
+
+
+//实现最简单的NFT
+contract  MyNFT is ERC721{
+    function mint(address to,uint tokenId) external {
+        _mint(to,tokenId);
+    }
+
+    function burn(uint tokenId) external {
+        require(msg.sender==_ownerOf[tokenId],"not owner");
+        _burn(tokenId);
+    }
 }
